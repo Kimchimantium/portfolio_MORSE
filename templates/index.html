@@ -1,0 +1,38 @@
+{% import 'bootstrap/wtf.html' as wtf %}
+{% extends 'bootstrap/base.html' %}
+{% block head %}
+<link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/vapor/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+{{ super() }}
+{% endblock %}
+{% block title %}Morse Decrypter{% endblock %}
+{% block body %}
+<div class="d-flex flex-column min-vh-100 bg-primary">
+    {% block content %}
+    <div class="bg-primary col-12 col-md-12 mb-5">
+        <h2>Morse Decoder</h2>
+        {{ wtf.quick_form(form) }}
+        <h2>output</h2>
+        <p>{{ result }} </p>
+    </div>
+    <footer class="bg-info text-light py-4 mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-6">
+                    <p><strong>Made by: </strong>Kevin Kim</p>
+                    <p>Python Developer</p>
+                    <p>Email: dukso123@gmail.com</p>
+                </div>
+                <div class="col-6 col-md-6">
+                    <h5>Follow Me</h5>
+                    <a href="https://github.com/Kimchimantium" class="text-light me-2">GitHub</a>
+                    <a href="https://www.instagram.com/minndiwoo/" class="text-light me-2">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+</div>
+
+{% endblock %}
+
