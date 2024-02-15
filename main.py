@@ -3,14 +3,17 @@ from morse import Morse
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, RadioField, validators
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 ms = Morse()
 
 # flask app config
 app = Flask(__name__)
 Bootstrap(app)
-app.config['SECRET_KEY'] = 'asdf1319'
-
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+print(os.environ.get('SECRET_KEY'))
 
 class MorseForm(FlaskForm):
     to_crypt = StringField(label='Morse or Word')
