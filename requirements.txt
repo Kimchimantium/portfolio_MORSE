@@ -30,7 +30,6 @@ tornado
 truststore
 urllib3_secure_extra
 watchdog
-xmlrpclib
 zstandard
 gunicorn
 idna
