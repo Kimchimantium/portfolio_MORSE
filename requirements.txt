@@ -20,7 +20,6 @@ lockfile
 mock
 Pillow
 protobuf
-pyodide
 pyOpenSSL
 python-dotenv
 railroad
