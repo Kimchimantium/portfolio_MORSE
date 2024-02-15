@@ -1,5 +1,4 @@
 asgiref
-Cython
 attr
 Babel
 brotli
@@ -16,7 +15,6 @@ HTMLParser
 importlib_metadata
 ipython
 ipywidgets
-jnius
 keyring
 lockfile
 mock

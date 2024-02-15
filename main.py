@@ -15,6 +15,7 @@ Bootstrap(app)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 print(os.environ.get('SECRET_KEY'))
 
+
 class MorseForm(FlaskForm):
     to_crypt = StringField(label='Morse or Word')
     type = RadioField(label='a', choices=('list', 'string'))
